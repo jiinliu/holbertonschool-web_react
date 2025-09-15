@@ -1,4 +1,3 @@
-// Define the Student interface
 interface Student {
   firstName: string;
   lastName: string;
@@ -6,24 +5,23 @@ interface Student {
   location: string;
 }
 
-// Create two students and the studentsList array
 const student1: Student = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 20,
-  location: "New York",
+  firstName: "Jin",
+  lastName: "Liu",
+  age: 18,
+  location: "Melbourne",
 };
 
 const student2: Student = {
-  firstName: "Jane",
-  lastName: "Smith",
+  firstName: "Betty",
+  lastName: "Holberton",
   age: 22,
   location: "San Francisco",
 };
 
 const studentsList: Student[] = [student1, student2];
 
-// Render a table with first name and location for each student
+
 function renderStudentsTable(students: Student[]): HTMLTableElement {
   const table: HTMLTableElement = document.createElement("table");
   const thead: HTMLTableSectionElement = document.createElement("thead");
@@ -57,7 +55,6 @@ function renderStudentsTable(students: Student[]): HTMLTableElement {
   return table;
 }
 
-// Ensure the DOM is ready before appending the table
 document.addEventListener("DOMContentLoaded", () => {
   const table = renderStudentsTable(studentsList);
   document.body.appendChild(table);
